@@ -1,0 +1,57 @@
+/* Estilos para el contenedor del formulario */
+.login-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  /* Estilos para el título del formulario */
+  .login-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para los campos de entrada (input) */
+  .login-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  /* Estilos para el botón de enviar */
+  .login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el botón de enviar al pasar el ratón por encima */
+  .login-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos para el enlace "Olvidé mi contraseña" */
+  .forgot-password {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para mensajes de error */
+  .error-message {
+    color: #ff0000;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
