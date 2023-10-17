@@ -1,10 +1,12 @@
 const connection = require("../models/db");
 
 module.exports.login = (req, res) => {
-  const { username, password } = req.body;
+  const { userName, password } = req.body;
+  console.log(userName);
+  console.log(password);
   const consult = "SELECT * FROM login WHERE userName = ? AND password = ?";
   try {
-    connection.query(consult, [username, password], (err, result) => {
+    connection.query(consult, [userName, password], (err, result) => {
       if (err) {
         res.send(err);
       }
