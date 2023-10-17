@@ -1,9 +1,8 @@
 const connection = require("../models/db");
+const jwt = require("jsonwebtoken");
 
 module.exports.login = (req, res) => {
   const { userName, password } = req.body;
-  console.log(userName);
-  console.log(password);
   const consult = "SELECT * FROM login WHERE userName = ? AND password = ?";
   try {
     connection.query(consult, [userName, password], (err, result) => {
@@ -11,8 +10,12 @@ module.exports.login = (req, res) => {
         res.send(err);
       }
       if (result.length > 0) {
+        const token = jwt.sign({ userName }, "Stack", {
+          expiresIn: "3m",
+        });
+
         console.log(result);
-        res.send(result);
+        res.send({ token });
       } else {
         console.log(result);
         res.send({ message: "wrong user" });
